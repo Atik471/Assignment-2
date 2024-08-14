@@ -51,6 +51,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10%;
 }
 .banner-content {
   width: 50%;
@@ -112,12 +113,15 @@ header {
   color: black;
 }
 .banner-img {
-  max-width: 50%;
+  width: 40%;
+  position: relative;
+  /* background-color: #b52e19; */
 }
 .gym-info-1 {
   position: absolute;
-  right: 110px;
-  bottom: 380px;
+  /* right: 110px; */
+  right: 0%;
+  bottom: 60%;
   max-width: 193px;
   max-height: 98px;
   padding: 17px 22px;
@@ -148,7 +152,7 @@ header {
 .gym-info-2 {
   z-index: 1;
   position: absolute;
-  right: 470px;
+  right: 50%;
   bottom: 63px;
   max-width: 206px;
   max-height: 96px;
@@ -216,7 +220,7 @@ nav .logo {
   border-radius: 2.5rem;
   position: relative;
 }
-nav .menu{
+nav .menu {
   display: none;
 }
 .navlist button {
@@ -451,6 +455,21 @@ select {
   text-align: left;
   border-style: none;
 }
+.bmi-content .calculator select {
+  color: rgba(255, 255, 255, 0.3);
+  appearance: none;
+  background-image: url('../images/dropdown.png');
+  background-repeat: no-repeat;
+  background-position: calc(100% - 16px) 12px;
+  background-size: 20px 20px;
+  
+}
+
+.bmi-content .calculator select option {
+  color: var(--opacity-text-2);
+
+  background-color: rgb(30, 29, 29);
+}
 .height {
   grid-area: height;
 }
@@ -475,8 +494,10 @@ select {
     "age sex"
     "activity activity";
 }
-.bmi-content .calculator button {
-  margin-top: 2.1rem;
+.bmi-content .calculator input[type="submit"] {
+  margin-top: 1.3rem;
+  margin-bottom: 0.5rem;
+  text-align: center;
 }
 
 /* team section styles */
@@ -672,9 +693,10 @@ footer .copyright {
   font-weight: 400;
   line-height: 1.5rempx;
   letter-spacing: 0.3px;
+  text-align: center;
 }
 
-@media screen and (width<=768px) {
+@media screen and (width<=576px) {
   .navlist {
     display: none;
   }
@@ -688,7 +710,7 @@ footer .copyright {
     font-weight: 800;
     line-height: 120%;
   }
-  nav .menu{
+  nav .menu {
     display: block;
     cursor: pointer;
   }
@@ -722,7 +744,8 @@ footer .copyright {
   .banner-content .header-btn {
     padding: 1rem 1.1rem;
   }
-  .banner-content .header-btn, .join-btn{
+  .banner-content .header-btn,
+  .join-btn {
     width: 47%;
   }
   .banner-content > h1,
@@ -747,41 +770,41 @@ footer .copyright {
     max-height: 74px;
     padding: 13px 18px;
   }
-  .gym-info-1 h1{
+  .gym-info-1 h1 {
     font-size: 1.9rem;
-font-weight: 900;
-line-height: 1.9rem;
-letter-spacing: 0.76px;
+    font-weight: 900;
+    line-height: 1.9rem;
+    letter-spacing: 0.76px;
   }
-  .gym-info-1 p{
+  .gym-info-1 p {
     font-size: 9.83px;
-font-weight: 400;
-line-height: 15.12px;
-letter-spacing: 0.76px;
+    font-weight: 400;
+    line-height: 15.12px;
+    letter-spacing: 0.76px;
   }
   .gym-info-2 {
-    bottom: 100px;
-    right: 47%;
+    bottom: 70px;
+    right: 50%;
     max-width: 165px;
     max-height: 73px;
     padding: 15px 17px;
   }
-  .gym-info-2 h1{
+  .gym-info-2 h1 {
     font-size: 18.14px;
-font-weight: 900;
-line-height: 18.14px;
-letter-spacing: 0.23px;
+    font-weight: 900;
+    line-height: 18.14px;
+    letter-spacing: 0.23px;
   }
-  .gym-info-2 p{
+  .gym-info-2 p {
     font-size: 12.1px;
-font-weight: 400;
-line-height: 18.14px;
-letter-spacing: 0.38px;
+    font-weight: 400;
+    line-height: 18.14px;
+    letter-spacing: 0.38px;
   }
-.gym-info-2 .circle{
-  width: 30px;
-  height: 30px;
-}
+  .gym-info-2 .circle {
+    width: 30px;
+    height: 30px;
+  }
 
   .habits-section {
     max-width: 81%;
@@ -789,7 +812,7 @@ letter-spacing: 0.38px;
   }
   .habits-section > h1 {
     /* background-color: #b52e19; */
-    
+
     font-size: 2rem;
     font-weight: 900;
   }
@@ -803,14 +826,14 @@ letter-spacing: 0.38px;
     align-items: center;
     margin-bottom: 70px;
   }
-  .habits h1{
+  .habits h1 {
     font-size: 1.1rem;
-font-weight: 600;
-margin-bottom: 6px;
+    font-weight: 600;
+    margin-bottom: 6px;
   }
-  .habits p{
+  .habits p {
     font-size: 0.9rem;
-font-weight: 300;
+    font-weight: 300;
   }
   .habits > div {
     max-width: 60%;
@@ -840,13 +863,12 @@ font-weight: 300;
     width: 100%;
     border-radius: 1.2rem;
   }
-  .join-now button{
+  .join-now button {
     width: 100%;
     margin-bottom: 30px;
   }
 
-
-  .bmi-calc{
+  .bmi-calc {
     margin-bottom: 66px;
   }
   .bmi-calc > h1,
@@ -869,60 +891,49 @@ font-weight: 300;
     max-width: 100%;
     margin-bottom: 42px;
   }
-  .bmi-content .chart h1{
+  .bmi-content .chart h1 {
     font-size: 1rem;
-font-weight: 900;
-margin-bottom: 1.5rem;
-  }
-  /* .bmi-content .calculator {
-    max-width: 90%;
-  }
-  .bmi-content .calculator .bmi-form {
-    grid-template-areas:
-      "height weight"
-      "age sex"
-      "activity activity"; 
-  }
-  .bmi-content .calculator input[type="text"],
-  select {
-    width: 170px;
-    font-size: 1rem;
-    font-weight: 400;
-  } */
-
-  .bmi-content .calculator h1{
-    font-size: 1rem;
-font-weight: 900;
+    font-weight: 900;
+    margin-bottom: 1.5rem;
   }
 
-  .bmi-content .calculator{
+  .bmi-content .calculator h1 {
+    font-size: 1rem;
+    font-weight: 900;
+  }
+
+  .bmi-content .calculator {
     max-width: 95%;
   }
   .bmi-content .calculator input[type="text"],
   select {
-    width: 170px;
+    /* width: 170px; */
     font-size: 1rem;
     font-weight: 400;
-  } 
+  }
   .bmi-content .calculator .bmi-form {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  .bmi-content .calculator input[type="submit"]{
+    width: 70%;
   }
 
   .team-members {
     grid-template-columns: repeat(1, 1fr);
     /* max-width: calc(100%-40px); */
     max-width: 353px;
-    
+
     margin: 0 auto;
     /* background-size:0%; */
   }
-  .team > h1{
+  .team > h1 {
     font-size: 2rem;
   }
-  .team > h1, .team > p{
+  .team > h1,
+  .team > p {
     max-width: 82%;
   }
-  .team > p{
+  .team > p {
     margin-bottom: 36px;
     /* width: 100%; */
   }
@@ -933,16 +944,16 @@ font-weight: 900;
     padding: 40px 20px;
     margin-bottom: 30px;
   }
-  .footer-content .col1{
+  .footer-content .col1 {
     max-width: 100%;
     margin-bottom: 30px;
   }
   footer hr {
     max-width: calc(100% - 40px);
   }
-  footer .copyright{
+  footer .copyright {
     margin: 50px auto 0;
-  padding-bottom: 60px;
-  text-align: center;
+    padding-bottom: 60px;
+    text-align: center;
   }
 }
