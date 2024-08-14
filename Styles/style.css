@@ -738,8 +738,9 @@ left: 128px;
 @media screen and (width<=576px) {
   .plans{
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
-    margin-left: 10%;
-    margin-right: 10%;
+    /* margin-left: 10%;
+    margin-right: 10%; */
+    margin: 0 10% 4rem;
   }
   .plans-content .box h1{
     font-size: 1.2rem;
@@ -959,10 +960,11 @@ left: 128px;
     font-weight: 400;
   }
   .bmi-content .calculator .bmi-form {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
   .bmi-content .calculator input[type="submit"]{
     width: 70%;
+    text-align: center;
   }
 
   .team-members {
