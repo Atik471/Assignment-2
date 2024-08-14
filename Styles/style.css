@@ -492,6 +492,7 @@ select {
   margin-top: 1.3rem;
   margin-bottom: 0.5rem;
   text-align: center;
+  /* padding: 0 auto; */
 }
 
 /* team section styles */
@@ -737,7 +738,7 @@ left: 128px;
 
 @media screen and (width<=576px) {
   .plans{
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
     /* margin-left: 10%;
     margin-right: 10%; */
     margin: 0 10% 4rem;
@@ -960,11 +961,11 @@ left: 128px;
     font-weight: 400;
   }
   .bmi-content .calculator .bmi-form {
-    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
   }
   .bmi-content .calculator input[type="submit"]{
     width: 70%;
-    text-align: center;
+    padding: 1rem 2.7rem 1rem 2.7rem;
   }
 
   .team-members {
