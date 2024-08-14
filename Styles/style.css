@@ -65,7 +65,7 @@ header {
   text-align: left;
   margin-bottom: 1.8rem;
 }
-.banner-content span {
+.banner-content .miama {
   font-family: "miama";
   font-style: italic;
   font-weight: 400;
@@ -215,6 +215,9 @@ nav .logo {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 2.5rem;
   position: relative;
+}
+nav .menu{
+  display: none;
 }
 .navlist button {
   cursor: pointer;
@@ -415,6 +418,7 @@ th {
   border-collapse: collapse;
   text-align: left;
 }
+
 .bmi-content .calculator {
   max-width: 50%;
   text-align: left;
@@ -537,7 +541,7 @@ select {
     url(../images/trainer6.png);
 }
 
-#trainer1:hover {
+/* #trainer1:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/trainer1.png);
 }
@@ -560,12 +564,13 @@ select {
 #trainer6:hover {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url(../images/trainer6.png);
-}
+} */
 
 .member {
   border-radius: 18px;
   position: relative;
-  width: 326px;
+  /* width: 326px; */
+  width: 100%;
   height: 276px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -678,10 +683,14 @@ footer .copyright {
     margin: 0px 20px 50px;
     padding: 0px;
   }
-  nav .log {
+  nav .logo {
     font-size: 36px;
     font-weight: 800;
     line-height: 120%;
+  }
+  nav .menu{
+    display: block;
+    cursor: pointer;
   }
   header {
     padding-top: 50px;
@@ -695,7 +704,7 @@ footer .copyright {
   }
   .banner-content {
     width: 100%;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
   }
   .banner-content .join-btn span {
     display: none;
@@ -711,11 +720,14 @@ footer .copyright {
     letter-spacing: 0.5px;
   }
   .banner-content .header-btn {
-    padding: 1rem 1.3rem;
+    padding: 1rem 1.1rem;
+  }
+  .banner-content .header-btn, .join-btn{
+    width: 47%;
   }
   .banner-content > h1,
   .banner-content > p {
-    max-width: calc(100% - 100px);
+    max-width: 85%;
   }
   .banner-img {
     max-width: 100%;
@@ -729,19 +741,55 @@ footer .copyright {
     /* height:500px; */
   }
   .gym-info-1 {
-    right: 32px;
-    bottom: 425px;
+    right: 8%;
+    bottom: 325px;
+    max-width: 175px;
+    max-height: 74px;
+    padding: 13px 18px;
+  }
+  .gym-info-1 h1{
+    font-size: 1.9rem;
+font-weight: 900;
+line-height: 1.9rem;
+letter-spacing: 0.76px;
+  }
+  .gym-info-1 p{
+    font-size: 9.83px;
+font-weight: 400;
+line-height: 15.12px;
+letter-spacing: 0.76px;
   }
   .gym-info-2 {
-    bottom: 150px;
-    right: 50%;
+    bottom: 100px;
+    right: 47%;
+    max-width: 165px;
+    max-height: 73px;
+    padding: 15px 17px;
   }
+  .gym-info-2 h1{
+    font-size: 18.14px;
+font-weight: 900;
+line-height: 18.14px;
+letter-spacing: 0.23px;
+  }
+  .gym-info-2 p{
+    font-size: 12.1px;
+font-weight: 400;
+line-height: 18.14px;
+letter-spacing: 0.38px;
+  }
+.gym-info-2 .circle{
+  width: 30px;
+  height: 30px;
+}
+
   .habits-section {
-    max-width: 80%;
+    max-width: 81%;
     margin: 0px auto;
   }
   .habits-section > h1 {
-    background-color: #b52e19;
+    /* background-color: #b52e19; */
+    
     font-size: 2rem;
     font-weight: 900;
   }
@@ -753,6 +801,16 @@ footer .copyright {
     flex-direction: column;
     gap: 36px;
     align-items: center;
+    margin-bottom: 70px;
+  }
+  .habits h1{
+    font-size: 1.1rem;
+font-weight: 600;
+margin-bottom: 6px;
+  }
+  .habits p{
+    font-size: 0.9rem;
+font-weight: 300;
   }
   .habits > div {
     max-width: 60%;
@@ -761,6 +819,7 @@ footer .copyright {
     max-width: 90%;
     padding: 33px 30px;
     flex-direction: column;
+    margin-bottom: 2rem;
   }
   .join-now .content {
     width: 100%;
@@ -772,9 +831,6 @@ footer .copyright {
   .join-now p {
     width: 100%;
   }
-  .join-btn button {
-    /* max-width: 100%; */
-  }
   .join-now .img {
     width: 100%;
     /* background-color: #b52e19; */
@@ -784,7 +840,15 @@ footer .copyright {
     width: 100%;
     border-radius: 1.2rem;
   }
+  .join-now button{
+    width: 100%;
+    margin-bottom: 30px;
+  }
 
+
+  .bmi-calc{
+    margin-bottom: 66px;
+  }
   .bmi-calc > h1,
   .bmi-calc > p {
     max-width: 90%;
@@ -795,6 +859,7 @@ footer .copyright {
   }
   .bmi-calc > p {
     font-size: 0.9rem;
+    margin-bottom: 2rem;
   }
   .bmi-content {
     flex-direction: column;
@@ -802,42 +867,82 @@ footer .copyright {
   }
   .bmi-content .chart {
     max-width: 100%;
+    margin-bottom: 42px;
   }
-  .bmi-content .calculator {
+  .bmi-content .chart h1{
+    font-size: 1rem;
+font-weight: 900;
+margin-bottom: 1.5rem;
+  }
+  /* .bmi-content .calculator {
     max-width: 90%;
-    /* background-color: #b52e19; */
   }
   .bmi-content .calculator .bmi-form {
-    /* background-color: aquamarine; */
-    /* grid-template-columns: repeat(1, 1fr); */
-    max-width: 100%; 
     grid-template-areas:
-      /* "height"
-      "weight"
-      "age"
-      "sex"
-      "activity"; */
       "height weight"
       "age sex"
-      "activity activity";
+      "activity activity"; 
   }
   .bmi-content .calculator input[type="text"],
   select {
-    display: none;
-    /* max-width: 100%; */
-    min-width: 170px;
-    width: auto;
+    width: 170px;
     font-size: 1rem;
     font-weight: 400;
+  } */
+
+  .bmi-content .calculator h1{
+    font-size: 1rem;
+font-weight: 900;
+  }
+
+  .bmi-content .calculator{
+    max-width: 95%;
+  }
+  .bmi-content .calculator input[type="text"],
+  select {
+    width: 170px;
+    font-size: 1rem;
+    font-weight: 400;
+  } 
+  .bmi-content .calculator .bmi-form {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   }
 
   .team-members {
     grid-template-columns: repeat(1, 1fr);
+    /* max-width: calc(100%-40px); */
+    max-width: 353px;
+    
+    margin: 0 auto;
     /* background-size:0%; */
+  }
+  .team > h1{
+    font-size: 2rem;
+  }
+  .team > h1, .team > p{
+    max-width: 82%;
+  }
+  .team > p{
+    margin-bottom: 36px;
+    /* width: 100%; */
   }
 
   .footer-content {
     flex-direction: column;
     max-width: 100%;
+    padding: 40px 20px;
+    margin-bottom: 30px;
+  }
+  .footer-content .col1{
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+  footer hr {
+    max-width: calc(100% - 40px);
+  }
+  footer .copyright{
+    margin: 50px auto 0;
+  padding-bottom: 60px;
+  text-align: center;
   }
 }
